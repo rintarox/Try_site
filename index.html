@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SibSelMash</title>
+        <link rel="stylesheet" href="./static/style.css">
+    </head>
+<body>
+
+    <header>
+        <div id="left_block">
+            <a href="" style="margin-right: 5%;"><img src="./img/logo.jpg" alt="logo" width="10%"></a>
+            <a href="">SibSelMash</a>
+        </div>
+
+        <input id="uin" type="text">
+        <button onclick="show_cats()">Зарегистрироваться</button>
+        <button onclick="chinazes()">Chinazes</button>
+        
+        <div id="right_block">
+            <a class="navigator" href="#general_info">Contacts</a>
+            <a class="navigator" href="#blog">Authors</a>
+            <a class="navigator" href="#Authors">Blog</a>
+            <a class="navigator" href="#footer">General</a>
+        </div>
+    </header>
+
+    <div id="general_info">
+        <img id="main_img" src="./img/main.jpg" alt="general" width="40%">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum aliquid laboriosam labore ipsum totam? Aperiam est sit exercitationem eligendi inventore reprehenderit? Rem magni corporis suscipit voluptate fugit. Pariatur, qui!
+        Voluptatum corporis aliquam labore repellat rem, eaque hic temporibus tempore vitae nemo veritatis distinctio soluta quam commodi id est numquam repellendus voluptate modi, inventore animi. :D</p>
+    </div>
+
+    <div id="blog">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium exercitationem porro nostrum harum ut corporis inventore omnis alias provident itaque consectetur vel consequatur ratione, rerum fuga nesciunt. Suscipit, consectetur quos.</p>
+        <p>Nulla ipsam nostrum non dolores voluptas illo numquam itaque quae at! Doloremque ex ipsam deserunt aliquam dicta ducimus dignissimos aliquid inventore natus nesciunt ipsum, suscipit voluptatibus, adipisci, architecto nulla molestias?</p>
+        <p>Vel voluptatem tempora amet aliquid dolorem ea rerum aperiam reprehenderit deserunt! Id necessitatibus nisi, voluptatum explicabo ipsum debitis officia, voluptates consectetur asperiores adipisci error iste assumenda illo iure voluptatibus nam!</p>
+        <p>Laboriosam aut incidunt consectetur necessitatibus sequi architecto quo qui vel esse tempora quos, delectus explicabo repellat, accusantium fugit! Sequi veritatis molestias ex inventore repudiandae nesciunt officia adipisci cum commodi laboriosam.</p>
+    </div>
+
+    <div id="Authors">
+        <img class="authors" src="./img/author.jpg" alt="">
+        <img class="authors" src="./img/author.jpg" alt="">
+        <img class="authors" src="./img/author.jpg" alt="">
+    </div>
+
+    <footer id="footer">
+        <p class="foot_info">+79652355232</p>
+        <p class="foot_info">NYC, 21 Groove st, 56/9</p>
+        <p class="foot_info">Oompa_loompa@gmail.com</p>
+    </footer>
+
+    <script>
+        function show_cats() {
+            let uin_element = document.querySelector("#uin");
+            let uin_data = uin_element.value;
+            
+            // console.log("Самий класний кэт в мире:", uin_data);
+            console.log("Котенок:", uin_data, "Добавлен в базу")
+            // check if base already exists;
+            let base_elem = document.querySelector(".base");
+
+            if (base_elem==null) {
+                console.log("p is null");
+                general_info.insertAdjacentHTML('beforebegin', '<p class="base" style="text-align: center;">' + uin_data + '</p>');
+            }
+            else {
+                console.log("p exists");
+                base_elem.innerText = uin_data;
+            }
+
+            // Должен быть обычный пут в поле?
+
+            // console.log(base_elem);
+        };
+
+        var i = 0;
+        function chinazes() {
+            i += 1;
+            console.log("Chinazes " + i);
+        };
+
+
+    </script>
+</body>
+</html>
